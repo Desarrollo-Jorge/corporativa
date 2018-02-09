@@ -1,0 +1,172 @@
+//@import "./reset";
+//ratios
+$normal: 1.5;
+$aureo: 1.618;
+
+
+$line-height:24px;
+$base: 1rem;
+$ratio: $aureo;
+$normal: $base;
+$t3: $base * $ratio;
+$t2: $t3 * $ratio;
+$t1: $t2 * $ratio;
+$xl: $t1 * $ratio;
+$xxl: $xl * $ratio;
+$small: $base / $ratio;
+
+//-h1=xl
+//-h2=t2
+// ===========================================
+// ============ h1 ===========================
+// ===========================================
+@mixin xl {
+  // background-color: purple;
+  line-height: $line-height * 1.8;
+  // margin: $line-height / 5 0 ;
+  font-size: 36px;
+  @media screen and(min-width: 440px) {
+    // background-color: blue;
+    font-size: 58px;
+    line-height: $line-height * 2.2;
+    // margin: $line-height / 4 0 ;
+  }
+  // @media screen and(min-width: 640px) {
+  //   font-size: $t1;
+  //   line-height: $line-height * 3;
+  //   margin: $line-height / 3 0 ;
+  // }
+  @media screen and(min-width: 720px) {
+    // background-color: green;
+    font-size: $t1;
+    line-height: $line-height * 3;
+    // margin: $line-height / 3.5 0 ;
+  }
+  @media screen and(min-width: 1020px) {
+    // background-color: yellow;
+    font-size: $t1;
+    line-height: $line-height * 4;
+    // margin: $line-height / 3 0;
+  }
+}
+// ===========================================
+// ============ h2 ===========================
+// ===========================================
+
+@mixin t1 {
+  // background-color: purple;
+  font-size: 38px;
+  // line-height: $line-height;
+  // margin: $line-height / 5 0;
+  @media screen and(min-width: 440px) {
+    // background-color: blue;
+    font-size: $t2 ;
+    line-height: $line-height * 2.2;
+    // margin: $line-height / 4.5 0;
+  }
+  @media screen and(min-width: 580px) {
+    // background-color: green;
+    font-size: $t2;
+    line-height: $line-height * 2.2;
+    // margin: $line-height / 3.5 0;
+  }
+  @media screen and(min-width: 1020px) {
+    // background-color: yellow;
+    font-size: $t1;
+    line-height: $line-height * 4;
+    // margin: $line-height / 3  1;
+  }
+}
+// ===========================================
+// ============ h3 ===========================
+// ===========================================
+
+@mixin t2 {
+  // background-color: purple;
+  font-size: $t3;
+  line-height: $line-height * 2;
+  @media screen and(min-width: 440px) {
+    // background-color: blue;
+    font-size: 37px ;
+    line-height: $line-height * 2.2;
+  }
+  // @media screen and(min-width: 640px) {
+  //   font-size: $t2;
+  // }
+  @media screen and(min-width: 720px) {
+    // background-color: green;
+    font-size: $t2;
+    line-height: $line-height * 2.5;
+  }
+  @media screen and(min-width: 1020px) {
+    // background-color: yellow;
+    font-size: $t2;
+    line-height: $line-height * 2.6;
+  }
+}
+// ===========================================
+// ============ h4 ===========================
+// ===========================================
+
+@mixin t3 {
+  // background-color: purple;
+  font-size: 18px;
+  line-height: $line-height * 1;
+  @media screen and(min-width: 440px) {
+    // background-color: blue;
+    font-size: 18px ;
+    line-height: $line-height * 1.5;
+  }
+  // @media screen and(min-width: 640px) {
+  //   font-size: $t2;
+  // }
+  @media screen and(min-width: 720px) {
+    // background-color: green;
+    font-size: 20px;
+    line-height: $line-height * 1.5;
+  }
+  @media screen and(min-width: 1020px) {
+    // background-color: yellow;
+    font-size: 20px;
+    line-height: $line-height * 1.8;
+  }
+  @media screen and(min-width: 1280px) {
+    // background-color: orange;
+    font-size: $t3;
+    line-height: $line-height * 2.6;
+  }
+}
+// ===========================================
+// ============ normal =======================
+// ===========================================
+
+@mixin normal {
+  background-color: purple;
+  font-size: 18px;
+  line-height: $line-height * 1;
+  @media screen and(min-width: 440px) {
+    background-color: blue;
+    font-size: 18px ;
+    line-height: $line-height * 1.5;
+  }
+  // @media screen and(min-width: 640px) {
+  //   font-size: $t2;
+  // }
+  @media screen and(min-width: 720px) {
+    background-color: green;
+    font-size: 20px;
+    line-height: $line-height * 1.5;
+  }
+  @media screen and(min-width: 1020px) {
+    background-color: yellow;
+    font-size: 20px;
+    line-height: $line-height * 1.8;
+  }
+  @media screen and(min-width: 1280px) {
+    background-color: orange;
+    font-size: $t3;
+    line-height: $line-height * 2.6;
+  }
+}
+
+
